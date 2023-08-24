@@ -1,11 +1,9 @@
 package com.flexicore.translation.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.flexicore.model.Baseclass;
-import com.flexicore.security.SecurityContext;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Translation extends Baseclass {
@@ -19,11 +17,6 @@ public class Translation extends Baseclass {
 
 	public Translation() {
 	}
-
-	public Translation(String name, SecurityContext securityContext) {
-		super(name, securityContext);
-	}
-
 	public String getExternalId() {
 		return externalId;
 	}
